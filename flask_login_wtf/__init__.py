@@ -12,9 +12,12 @@ def init_app():
     db.init_app(app)
     login_manager.init_app(app)
 
-    if app.app_context():
+    with app.app_context():
         from . import routes
         from . import auth
+
+        app.register_blueprint(auth.auth_blueprint)
+        app.register_blueprint(routes.main_blueprint)
 
         db.create_all()
 

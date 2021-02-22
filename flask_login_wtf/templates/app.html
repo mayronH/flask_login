@@ -1,0 +1,12 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <div class="container h-100">
+        <div class="row justify-content-md-center h-100">
+            <div class="col-lg-5 col-md-9 col-sm-10">
+                <h1>Você logou com sucesso</h1>
+                <a href="{{ url_for('main_blueprint.logout') }}">Clique aqui para sair</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

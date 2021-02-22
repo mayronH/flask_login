@@ -1,4 +1,4 @@
-from flask_login import init_app
+from flask_login_wtf import init_app
 
 app = init_app()
 

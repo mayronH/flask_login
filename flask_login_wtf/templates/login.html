@@ -1,0 +1,52 @@
+{% extends "main.html" %}
+
+{% block content %}
+    <div class="container h-100">
+        <div class="row justify-content-md-center h-100">
+            <div class="col-lg-5 col-md-9 col-sm-10">
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="card-body">
+                            <h1>Login</h1>
+        
+                            {% for message in get_flashed_messages() %}
+                                <div class="alert alert-warning">
+                                    {{ message }}
+                                </div>
+                            {% endfor %}
+                
+                            <form action="{{ url_for('auth_blueprint.login') }}" method="POST">
+                                {{ form.csrf_token }}
+                
+                                <fieldset class="form-group">
+                                    {{ form.email.label }}
+                                    {{ form.email(placeholder='Email') }}
+                                    {% for error in form.email.errors %}
+                                        <small class="text-danger">{{ error }}</small>
+                                    {% endfor %}
+                                </fieldset>
+                
+                                <fieldset class="form-group">
+                                    {{ form.password.label }}
+                                    {{ form.password(placeholder='Senha') }}
+                                    {% for error in form.password.errors %}
+                                        <small class="text-danger">{{ error }}</small>
+                                    {% endfor %}
+                                </fieldset>
+                
+                                <div class="btn-submit">
+                                    {{ form.submit }}
+                                </div>
+                            </form>
+                
+                            <div class="text-center">
+                                <span>Ainda não possui uma conta?</span>
+                                <a href="{{ url_for('auth_blueprint.signup') }}">Registrar.</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,74 @@
+body,
+html {
+    overflow-x: hidden;
+
+    font-size: 1.6rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    background: #eeeeee;
+
+    height: 100vh;
+}
+
+.justify-content-md-center {
+    align-items: center;
+}
+
+.card {
+    border-color: transparent;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card-body {
+    padding: 1.8rem;
+}
+
+h1 {
+    font-size: 3.4rem;
+
+    text-align: center;
+
+    margin-bottom: 3rem;
+}
+
+small {
+    display: block;
+
+    font-size: 1.2rem;
+}
+
+input {
+    display: block;
+
+    width: 100%;
+
+    border: 1px solid #353b42;
+    min-height: 4.4rem;
+
+    padding: 1.2rem 0.8rem;
+}
+
+.btn-submit input {
+    width: 100%;
+
+    padding: 1rem 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    border: 1px solid #353b42;
+    background: #011022;
+
+    font-size: 1.8rem;
+    color: #fff;
+}
