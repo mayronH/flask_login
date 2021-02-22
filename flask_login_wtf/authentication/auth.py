@@ -3,9 +3,9 @@ from flask.globals import request
 from flask.helpers import url_for, flash
 from flask_login import login_user, current_user
 from datetime import datetime
-from .forms import SignupForm, LoginForm
-from .models import User
-from . import db, login_manager
+from flask_login_wtf.forms import SignupForm, LoginForm
+from flask_login_wtf.models import User
+from flask_login_wtf import db, login_manager
 
 auth_blueprint = Blueprint('auth_blueprint', __name__, template_folder='templates', static_folder='static')
 

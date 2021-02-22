@@ -14,7 +14,7 @@ def init_app():
 
     with app.app_context():
         from . import routes
-        from . import auth
+        from .authentication import auth
 
         app.register_blueprint(auth.auth_blueprint)
         app.register_blueprint(routes.main_blueprint)
